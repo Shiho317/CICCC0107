@@ -1,0 +1,78 @@
+@use "base" as *;
+@use "./button" as *;
+
+.header{
+  background: center no-repeat url('../images/bg.jpeg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+
+  &::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: $color-black;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  & .brand{
+    flex: 2;
+    position: relative;
+    z-index: 1;
+    @include flexLayout;
+    gap: 20px;
+    color: $color-secondary;
+
+    & .logo{
+    
+    & img{
+      width: 120px;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+    }
+  }
+
+  & .main-name{
+      @include textStyles;
+      font-size: 40px;
+    }
+
+  & .sub-name{
+      @include textStyles;
+      font-size: 20px;
+    }
+
+  }
+
+  &-banner{
+    flex: 4;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: $color-secondary;
+
+    & .main-heading{
+      font-size: 80px;
+      color: $color-primary;
+      font-family: $font-dancingScript;
+    }
+
+    & .sub-heading{
+      @include textSub;
+      font-size: 50px;
+    }
+
+    & .main-btn{
+      @include buttonStyles;
+    }
+  }
+  
+}

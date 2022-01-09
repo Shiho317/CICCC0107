@@ -1,0 +1,68 @@
+@use "base" as *;
+@use "./button" as *;
+
+.gallery{
+  position: relative;
+  height: 100%;
+  
+  & .cards-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    & .card{
+      position: relative;
+      overflow: hidden;
+      height: 450px;
+
+      &:hover .card-overlay{
+        left: 0;
+      }
+
+      &-overlay{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: #d3ab5588;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.5s ease;
+
+        &-heading{
+          color: $color-white;
+          font-family: $font-josefinSans;
+          font-weight: lighter;
+          font-size: 50px;
+        }
+
+        &-paragraph{
+          color: $color-white;
+          @include textSub;
+          font-size: 30px;
+        }
+
+        &-btn{
+          font-family: $font-josefinSans;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $color-primary;
+          @include orderButton;
+        }
+      }
+
+      &-img{
+        width: 150%;
+        height: 450px;
+        transform: translateX(-18%);
+        cursor: pointer;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "base" as *;
+
+@mixin buttonStyles{
+  background: transparent;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  @include textStyles;
+  padding: 15px 30px;
+}
+
+@mixin orderButton {
+  background: $color-white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 150px;
+}

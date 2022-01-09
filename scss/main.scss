@@ -1,2 +1,11 @@
 @use "base";
 @use "layout";
+@use "./header";
+@use "./about";
+@use "./gallery";
+@use "./footer";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}

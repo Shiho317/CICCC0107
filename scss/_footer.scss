@@ -1,0 +1,65 @@
+@use "base" as *;
+@use "./button" as *;
+
+.footer{
+  position: relative;
+  background: $color-dark;
+  height: 50vh;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  align-items: center;
+
+  &-header{
+    @include flexLayout;
+    gap: 20px;
+    color: $color-secondary;
+
+    & .logo{
+
+      & img{
+        width: 120px;
+        border: 2px solid $color-primary;
+        border-radius: 50%;
+      }
+    }
+
+    & .main-name{
+      @include textStyles;
+      font-size: 40px;
+    }
+
+    & .sub-name{
+      @include textStyles;
+      font-size: 18px;
+      font-weight: lighter;
+    }
+
+  }
+
+  &-social-media{
+
+    & .social-media{
+      @include flexLayout;
+      gap: 30px;
+
+      &-item{
+        list-style: none;
+      }
+
+      &-link{
+        color: $color-secondary;
+        font-size: 50px;
+      }
+
+    }
+
+  }
+
+  &-copyright{
+
+    &-paragraph{
+      color: $color-secondary;
+      text-align: center;
+    }
+  }
+}

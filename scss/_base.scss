@@ -19,3 +19,8 @@ $font-nunito: 'Nunito', sans-serif;
     letter-spacing: 2px;
     text-transform: $transform;
 }
+
+@mixin textSub {
+    font-family: $font-josefinSans;
+    font-weight: lighter;
+}

@@ -201,6 +201,11 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 15px 30px;
+  transition: all 0.5s ease;
+}
+.header-banner .main-btn:hover {
+  background: #d3ab55;
+  color: #262626;
 }
 
 .about-us {
@@ -256,6 +261,12 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 15px 30px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.about-us .about-us-right .main-btn:hover {
+  background: #d3ab55;
+  color: #262626;
 }
 
 .gallery {
@@ -365,6 +376,10 @@
 .footer-social-media .social-media-link {
   color: #bbb;
   font-size: 50px;
+  transition: all 0.5s ease;
+}
+.footer-social-media .social-media-link:hover {
+  color: #d3ab55;
 }
 .footer-copyright-paragraph {
   color: #bbb;

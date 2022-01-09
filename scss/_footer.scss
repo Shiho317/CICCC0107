@@ -49,6 +49,11 @@
       &-link{
         color: $color-secondary;
         font-size: 50px;
+        transition: all 0.5s ease;
+
+        &:hover{
+          color: $color-primary;
+        }
       }
 
     }

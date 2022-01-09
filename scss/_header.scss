@@ -72,6 +72,10 @@
 
     & .main-btn{
       @include buttonStyles;
+
+      &:hover{
+        @include hoverButtons;
+      }
     }
   }
   

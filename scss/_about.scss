@@ -52,6 +52,11 @@
 
     & .main-btn{
       @include buttonStyles;
+      cursor: pointer;
+
+      &:hover{
+        @include hoverButtons;
+      }
     }
   }
 }
